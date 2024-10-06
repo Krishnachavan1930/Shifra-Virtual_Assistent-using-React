@@ -1,0 +1,127 @@
+/* AIAssistant.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Protest Guerrilla', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.ai-assistant-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.assistant-logo {
+  width: 20vw;
+  max-width: 200px;
+}
+
+.assistant-title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.assistant-name {
+  color: rgb(212, 43, 122);
+  font-size: 2.8rem;
+}
+
+.assistant-role {
+  color: rgb(43, 206, 212);
+  font-size: 2.8rem;
+}
+
+.voice-animation {
+  width: 100px;
+  display: none;
+}
+
+.voice-animation.active {
+  display: block;
+}
+
+.talk-button {
+  width: 30%;
+  background: linear-gradient(to right, rgb(21, 145, 207), rgb(201, 41, 116));
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 20px;
+  border-radius: 20px;
+  color: white;
+  box-shadow: 2px 2px 10px rgb(21, 145, 207), 2px 2px 10px rgb(201, 41, 116);
+  border: none;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.talk-button:hover {
+  box-shadow: 2px 2px 20px rgb(21, 145, 207), 2px 2px 20px rgb(201, 41, 116);
+  letter-spacing: 2px;
+}
+
+.talk-button.hidden {
+  display: none;
+}
+
+.transcript {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .assistant-logo {
+    width: 30vw;
+  }
+
+  .assistant-title {
+    font-size: 1.5rem;
+  }
+
+  .assistant-name,
+  .assistant-role {
+    font-size: 2rem;
+  }
+
+  .talk-button {
+    width: 80%;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .assistant-logo {
+    width: 40vw;
+  }
+
+  .assistant-title {
+    font-size: 1.2rem;
+  }
+
+  .assistant-name,
+  .assistant-role {
+    font-size: 1.8rem;
+  }
+
+  .talk-button {
+    width: 90%;
+    font-size: 14px;
+  }
+}
